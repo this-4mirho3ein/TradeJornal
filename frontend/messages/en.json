@@ -1,0 +1,489 @@
+{
+  "Metadata": {
+    "titleDefault": "Trade Journal",
+    "titleTemplate": "{title} · Trade Journal",
+    "description": "Professional MetaTrader 4 trading journal with live account sync, open positions, and performance analytics."
+  },
+  "Common": {
+    "brand": "Trade Journal",
+    "brandTag": "MT4 Desk",
+    "workspace": "Workspace",
+    "currentView": "Current view",
+    "mt4Journal": "MetaTrader 4 journal",
+    "liveBridge": "Live bridge",
+    "liveBridgeCopy": "Sync MetaTrader, review open risk, and keep every closed trade in one calm desk.",
+    "navigation": "Navigation",
+    "openNavigation": "Open navigation",
+    "collapseSidebar": "Collapse sidebar",
+    "expandSidebar": "Expand sidebar",
+    "toggleTheme": "Toggle theme",
+    "language": "Language",
+    "english": "English",
+    "persian": "Persian"
+  },
+  "Nav": {
+    "dashboard": "Dashboard",
+    "dashboardDesc": "Account & risk",
+    "journal": "Journal",
+    "journalDesc": "Closed trades",
+    "backtest": "Backtest",
+    "backtestDesc": "Strategy lab",
+    "settings": "Settings",
+    "settingsDesc": "Connection"
+  },
+  "Dashboard": {
+    "metaTitle": "Dashboard",
+    "metaDescription": "MetaTrader account summary, balance, equity, open positions, and performance.",
+    "eyebrow": "Desk overview",
+    "title": "Dashboard",
+    "description": "Live MetaTrader health, open risk, and closed-trade performance in one calm terminal view.",
+    "accountPulse": "Account pulse",
+    "accountPulseHint": "Balance, equity & open risk",
+    "performance": "Performance",
+    "performanceHint": "From {count} closed trades",
+    "recentTrades": "Recent trades",
+    "recentTradesHint": "Latest closed tickets from MetaTrader history",
+    "shownOf": "{shown} of {total}",
+    "noClosedYet": "No closed trades yet",
+    "noClosedHint": "Sync your MT4 account to populate this feed.",
+    "apiUnreachable": "API unreachable",
+    "apiUnreachableHint": "Start the Flask backend on port 5001, then refresh this page.",
+    "inspect": "Inspect MT4",
+    "sync": "Sync account",
+    "savedToast": "Saved to SQLite journal",
+    "savedToastDesc": "{inserted} new · {updated} updated · {total} total",
+    "syncFailed": "Synchronization failed",
+    "metrics": {
+      "balance": "Balance",
+      "balanceHint": "Settled account cash",
+      "equity": "Equity",
+      "equityHint": "Balance plus floating P/L",
+      "floating": "Floating P/L",
+      "floatingHint": "Open book · used margin {margin}",
+      "drawdown": "Drawdown",
+      "drawdownHint": "Max {amount} · open {current}",
+      "winRate": "Win rate",
+      "winRateHint": "{wins} wins · {losses} losses",
+      "netProfit": "Net profit",
+      "netProfitHint": "Sum of closed trade P/L",
+      "profitFactor": "Profit factor",
+      "profitFactorHint": "Expectancy {value}",
+      "avgWinLoss": "Avg win / loss",
+      "avgWinLossHint": "Average winner versus loser"
+    },
+    "account": {
+      "eyebrow": "Trading account",
+      "fallbackName": "Account {login}",
+      "live": "Live MT4",
+      "synced": "Last synced",
+      "login": "Login",
+      "currency": "Currency",
+      "leverage": "Leverage",
+      "lastUpdate": "Last update",
+      "floating": "Floating P/L",
+      "emptyTitle": "No MetaTrader account connected",
+      "emptyHint": "Run a sync from the controls above to pull live balance, equity, and trade history."
+    },
+    "positions": {
+      "title": "Open positions",
+      "hint": "Live market exposure from MetaTrader",
+      "openCount": "{count} open",
+      "flatTitle": "Flat book",
+      "flatHint": "No open positions on this account right now.",
+      "timesUtc": "Times in UTC",
+      "oldestOpen": " · oldest open {time}"
+    },
+    "equityCurve": {
+      "title": "Equity curve",
+      "hint": "Cumulative closed-trade P/L over time",
+      "emptyTitle": "No curve yet",
+      "emptyHint": "Closed trades will plot your equity path here."
+    },
+    "table": {
+      "ticket": "Ticket",
+      "symbol": "Symbol",
+      "side": "Side",
+      "volume": "Volume",
+      "duration": "Duration",
+      "closed": "Closed",
+      "profit": "Profit",
+      "open": "Open",
+      "current": "Current",
+      "slTp": "SL / TP"
+    }
+  },
+  "Journal": {
+    "metaTitle": "Journal",
+    "metaDescription": "Professional closed-trade journal grid with search, filters, and P/L.",
+    "eyebrow": "Trade log",
+    "title": "Journal",
+    "description": "Closed-trade grid for account #{account} · {currency}",
+    "emptyDescription": "Closed trades appear here after you sync MetaTrader.",
+    "emptyTitle": "Journal is empty",
+    "emptyHint": "Sync an MT4 account from the dashboard first to populate tickets, symbols, and results.",
+    "closedTrades": "Closed trades",
+    "filtersTitle": "Filters",
+    "filtersHint": "Narrow the desk by side, market context, or outcome",
+    "filtersActive": "{count} active",
+    "clearFilters": "Clear filters",
+    "filteredCount": "{shown} of {total}",
+    "paginationSummary": "Showing {from}–{to} of {total}",
+    "paginationPage": "Page {page} of {pages}",
+    "paginationPrev": "Previous",
+    "paginationNext": "Next",
+    "paginationNav": "Journal pagination",
+    "paginationGoTo": "Go to page {page}",
+    "filterLabels": {
+      "search": "Search"
+    },
+    "searchPlaceholder": "Search ticket, symbol, notes…",
+    "allSides": "All sides",
+    "allTimeframes": "All timeframes",
+    "allSessions": "All sessions",
+    "allTrends": "All trends",
+    "allCycles": "All cycles",
+    "allResults": "All results",
+    "resultFilter": "Result",
+    "buy": "Buy",
+    "sell": "Sell",
+    "winners": "Winners",
+    "losers": "Losers",
+    "breakEven": "Break even",
+    "noMatch": "No trades match the current filters.",
+    "win": "Win",
+    "loss": "Loss",
+    "be": "BE",
+    "addManualAction": "Add record",
+    "addManualTitle": "Add journal record",
+    "addManualHint": "Log a trade manually with notes, R/R, market context, and an optional screenshot.",
+    "saveManual": "Save record",
+    "manualCreated": "Journal record added",
+    "manualCreateFailed": "Could not add journal record",
+    "manualTicket": "Manual",
+    "emptyHintManual": "Sync MT4 from the dashboard, or add a manual journal record to start.",
+    "editTrade": "Edit journal notes",
+    "enrichmentTitle": "Journal notes",
+    "enrichmentHint": "Add notes, R/R, market context, and a screenshot for ticket #{ticket} · {symbol}. MT4 fields stay unchanged.",
+    "enrichmentFooter": "Add manual records anytime, or use the pencil to enrich synced MT4 trades. Sync never overwrites your notes.",
+    "enrichmentSaved": "Journal notes saved",
+    "enrichmentSaveFailed": "Could not save journal notes",
+    "saveEnrichment": "Save notes",
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "unset": "Not set",
+    "fields": {
+      "symbol": "Symbol",
+      "side": "Side",
+      "volume": "Volume",
+      "openPrice": "Open price",
+      "closePrice": "Close price",
+      "profit": "Profit",
+      "openTime": "Open time",
+      "closeTime": "Close time",
+      "rMultiple": "R/R",
+      "timeframe": "Timeframe",
+      "session": "Session",
+      "trend": "Trend",
+      "cycle": "Cycle",
+      "notes": "Notes",
+      "notesPlaceholder": "Setup quality, mistakes, observations…",
+      "image": "Trade image",
+      "uploadImage": "Upload screenshot",
+      "uploadImageHint": "Optional · JPG, PNG, WEBP",
+      "removeImage": "Remove image",
+      "imagePreview": "Trade screenshot preview"
+    },
+    "table": {
+      "ticket": "Ticket",
+      "symbol": "Symbol",
+      "side": "Side",
+      "volume": "Volume",
+      "open": "Open",
+      "close": "Close",
+      "duration": "Duration",
+      "result": "Result",
+      "comment": "Comment",
+      "profit": "Profit",
+      "image": "Image",
+      "timeframe": "TF",
+      "trend": "Trend",
+      "cycle": "Cycle",
+      "r": "R/R"
+    }
+  },
+  "Backtest": {
+    "metaTitle": "Backtest",
+    "metaDescription": "Create strategies and manually log backtest trade records.",
+    "recordsMetaTitle": "Strategy backtest",
+    "recordsMetaDescription": "Review and add manual backtest records for a strategy.",
+    "eyebrow": "Strategy lab",
+    "title": "Backtest",
+    "description": "Name a strategy first, then log every backtest trade into that strategy’s record book.",
+    "createTitle": "New strategy",
+    "createHint": "Enter the strategy name to open its backtest desk.",
+    "createAction": "Create strategy",
+    "creating": "Creating…",
+    "strategiesTitle": "Your strategies",
+    "strategiesHint": "Open a strategy to view and add backtest records",
+    "emptyStrategiesTitle": "No strategies yet",
+    "emptyStrategiesHint": "Create your first strategy name above — for example London Breakout or Liquidity Sweep.",
+    "noDescription": "No description",
+    "recordsCount": "{count} records",
+    "openStrategy": "Open records",
+    "strategyCreated": "Strategy created",
+    "strategyCreateFailed": "Could not create strategy",
+    "strategyDeleted": "Strategy deleted",
+    "strategyDeleteFailed": "Could not delete strategy",
+    "deleteStrategy": "Delete strategy",
+    "deleteStrategyTitle": "Delete strategy?",
+    "deleteStrategyHint": "“{name}” and its {count} backtest records will be removed permanently.",
+    "deleteStrategyWarning": "This cannot be undone. Attached trade screenshots will also be deleted.",
+    "confirmDeleteStrategy": "Delete strategy",
+    "deletingStrategy": "Deleting…",
+    "recordsEyebrow": "Backtest records",
+    "recordsDescription": "{count} logged trades in this strategy",
+    "backToStrategies": "All strategies",
+    "strategyNotFound": "Strategy not found",
+    "addRecordTitle": "Add backtest record",
+    "addRecordHint": "Log one backtest trade. Attach a screenshot if you want — only the file path is stored in SQLite.",
+    "addRecordAction": "Add record",
+    "closeAddRecord": "Close add form",
+    "saveRecord": "Save record",
+    "savingRecord": "Saving…",
+    "recordCreated": "Backtest record saved",
+    "recordCreateFailed": "Could not save record",
+    "recordDeleted": "Record deleted",
+    "recordDeleteFailed": "Could not delete record",
+    "deleteRecord": "Delete record",
+    "deleteRecordTitle": "Delete record?",
+    "deleteRecordHint": "Remove the {side} {symbol} trade from {time}.",
+    "deleteRecordWarning": "This cannot be undone. Any attached screenshot will also be deleted.",
+    "confirmDeleteRecord": "Delete record",
+    "deletingRecord": "Deleting…",
+    "editRecord": "Edit record",
+    "editRecordTitle": "Edit backtest record",
+    "editRecordHint": "Update the trade fields. Replace or remove the screenshot if needed.",
+    "saveChanges": "Save changes",
+    "cancelEdit": "Cancel",
+    "recordUpdated": "Record updated",
+    "recordUpdateFailed": "Could not update record",
+    "recordsTitle": "Record book",
+    "recordsHint": "All manual backtest trades for this strategy",
+    "filtersTitle": "Filters",
+    "filtersHint": "Narrow the record book by symbol, side, session, or outcome",
+    "filtersActive": "{count} active",
+    "filterLabels": {
+      "search": "Search"
+    },
+    "searchPlaceholder": "Search symbol or notes…",
+    "clearFilters": "Clear filters",
+    "filteredCount": "{shown} of {total}",
+    "noMatch": "No records match these filters",
+    "allSides": "All sides",
+    "allTimeframes": "All timeframes",
+    "allSessions": "All sessions",
+    "allTrends": "All trends",
+    "allCycles": "All cycles",
+    "allResults": "All results",
+    "resultFilter": "Result",
+    "winners": "Winners",
+    "losers": "Losers",
+    "breakEven": "Break even",
+    "emptyRecordsTitle": "No records yet",
+    "emptyRecordsHint": "Use the form above to add your first backtest trade.",
+    "stats": {
+      "netProfit": "Net R",
+      "winRate": "Win rate",
+      "records": "Records",
+      "wl": "{wins} wins · {losses} losses",
+      "wlShort": "W / L",
+      "netR": "Net R"
+    },
+    "fields": {
+      "strategyName": "Strategy name",
+      "strategyNamePlaceholder": "e.g. London Breakout",
+      "description": "Description",
+      "descriptionPlaceholder": "Optional notes about the rules",
+      "symbol": "Symbol",
+      "side": "Side",
+      "volume": "Volume",
+      "timeframe": "Timeframe",
+      "openPrice": "Open price",
+      "closePrice": "Close price",
+      "stopLoss": "Stop loss",
+      "takeProfit": "Take profit",
+      "profit": "Profit",
+      "rMultiple": "R/R",
+      "openTime": "Open time",
+      "closeTime": "Close time",
+      "notes": "Notes",
+      "notesPlaceholder": "Setup quality, mistakes, observations…",
+      "rating": "Rating",
+      "session": "Session",
+      "trend": "Trend",
+      "image": "Trade image",
+      "uploadImage": "Upload screenshot",
+      "uploadImageHint": "Optional · JPG, PNG, WEBP",
+      "removeImage": "Remove image",
+      "imagePreview": "Trade screenshot preview",
+      "cycle": "Cycle"
+    },
+    "side": {
+      "buy": "Buy",
+      "sell": "Sell"
+    },
+    "table": {
+      "symbol": "Symbol",
+      "side": "Side",
+      "volume": "Volume",
+      "timeframe": "TF",
+      "open": "Open",
+      "close": "Close",
+      "duration": "Duration",
+      "r": "R/R",
+      "profit": "Profit",
+      "session": "Session",
+      "trend": "Trend",
+      "image": "Image",
+      "openTime": "Open time",
+      "cycle": "Cycle"
+    },
+    "validation": {
+      "required": "This field is required",
+      "tooLong": "Value is too long",
+      "closeBeforeOpen": "Close time must be after open time"
+    },
+    "session": {
+      "asian": "Asian",
+      "london": "London",
+      "newyork": "New York",
+      "london_ny": "London / NY",
+      "other": "Other"
+    },
+    "trend": {
+      "bullish": "Bullish",
+      "bearish": "Bearish",
+      "ranging": "Ranging"
+    },
+    "timeframe": {
+      "1m": "1m",
+      "5m": "5m",
+      "15m": "15m",
+      "30m": "30m",
+      "1h": "1h"
+    },
+    "cycle": {
+      "spike": "Spike",
+      "channel": "Channel",
+      "trading_range": "Trading Range"
+    }
+  },
+  "Settings": {
+    "metaTitle": "Settings",
+    "metaDescription": "Trade Journal launch guide and connection settings.",
+    "eyebrow": "Workspace",
+    "title": "Settings",
+    "description": "Launch checklist for Windows MT4, Mac backend, and the frontend — plus API connection details.",
+    "apiTitle": "API connection",
+    "apiHint": "Frontend talks to this backend for inspect and sync",
+    "configured": "Configured",
+    "backendUrl": "Backend URL",
+    "website": "Website",
+    "apiFooter": "Live mode uses <adapter></adapter> and reads JSON from <ea></ea>. Synced trades are stored in SQLite at <db></db>.",
+    "languageTitle": "Language",
+    "languageHint": "Switch between English (LTR) and Persian (RTL)",
+    "launch": {
+      "title": "Launch guide",
+      "intro": "Run these in order every time you start the Trade Journal. Keep all three processes running while you use the website.",
+      "eachLaunch": "Each launch",
+      "orderMatters": "Order matters:",
+      "orderCopy": "Windows MT4 + copy script → Mac backend → Mac frontend → Inspect → Sync.",
+      "command": "Command",
+      "copy": "Copy",
+      "copied": "Copied",
+      "copySuccess": "Command copied",
+      "copyError": "Could not copy command",
+      "keepRunningTitle": "Keep running",
+      "keepRunningCopy": "Do not close the Windows PowerShell copy script, the Flask API terminal, or the Next.js terminal while using the desk. If data looks stale, check those three first.",
+      "stepLabel": "Step {order} · {machine}",
+      "sections": {
+        "windows": {
+          "machine": "Windows (Parallels)",
+          "title": "MetaTrader bridge",
+          "summary": "Start MT4 first so account JSON files keep updating.",
+          "steps": {
+            "1": {
+              "title": "Open MetaTrader 4 and log into your account"
+            },
+            "2": {
+              "title": "Confirm TradeJournalBridge EA is attached to a chart",
+              "detail": "Smiley face on the chart. Input InpExportFolder = TradeJournal, InpHistoryDays = 0."
+            },
+            "3": {
+              "title": "Load full history once (if trades are missing)",
+              "detail": "Account History tab → right click → All History."
+            },
+            "4": {
+              "title": "Start the copy script and leave it open",
+              "detail": "This copies JSON files from Windows into the Mac project folder."
+            },
+            "5": {
+              "title": "Confirm it prints synced 4 file(s)",
+              "detail": "heartbeat.json, account.json, positions.json, history.json"
+            }
+          }
+        },
+        "backend": {
+          "machine": "Mac terminal 1",
+          "title": "Backend API",
+          "summary": "Flask reads the bridge files and saves trades into SQLite.",
+          "steps": {
+            "1": {
+              "title": "Start the API"
+            },
+            "2": {
+              "title": "Confirm it is running",
+              "detail": "API should be available at http://127.0.0.1:5001"
+            },
+            "3": {
+              "title": "Optional: verify SQLite journal"
+            }
+          }
+        },
+        "frontend": {
+          "machine": "Mac terminal 2",
+          "title": "Frontend UI",
+          "summary": "Next.js dashboard and journal panels.",
+          "steps": {
+            "1": {
+              "title": "Start the frontend"
+            },
+            "2": {
+              "title": "Open the website",
+              "detail": "http://localhost:3000/en/dashboard"
+            }
+          }
+        },
+        "browser": {
+          "machine": "In the browser",
+          "title": "Use the desk",
+          "summary": "Pull live data, then persist it into the journal database.",
+          "steps": {
+            "1": {
+              "title": "Click Inspect MT4",
+              "detail": "Check login, balance, and equity look correct."
+            },
+            "2": {
+              "title": "Click Sync Account",
+              "detail": "Saves closed trades into SQLite (idempotent, no duplicates)."
+            },
+            "3": {
+              "title": "Open Journal",
+              "detail": "Review and journal all stored closed trades."
+            }
+          }
+        }
+      }
+    }
+  }
+}

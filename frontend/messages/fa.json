@@ -1,0 +1,489 @@
+{
+  "Metadata": {
+    "titleDefault": "ژورنال معاملاتی",
+    "titleTemplate": "{title} · ژورنال معاملاتی",
+    "description": "ژورنال حرفه‌ای معاملات متاتریدر ۴؛ همگام‌سازی زنده حساب، پوزیشن‌های باز و تحلیل عملکرد."
+  },
+  "Common": {
+    "brand": "ژورنال معاملاتی",
+    "brandTag": "میز MT4",
+    "workspace": "فضای کاری",
+    "currentView": "صفحه فعلی",
+    "mt4Journal": "ژورنال متاتریدر ۴",
+    "liveBridge": "اتصال زنده",
+    "liveBridgeCopy": "متاتریدر را همگام کنید، ریسک باز را ببینید و همه معاملات بسته‌شده را در یک جا نگه دارید.",
+    "navigation": "منو",
+    "openNavigation": "باز کردن منو",
+    "collapseSidebar": "جمع کردن نوار کناری",
+    "expandSidebar": "باز کردن نوار کناری",
+    "toggleTheme": "تغییر تم",
+    "language": "زبان",
+    "english": "انگلیسی",
+    "persian": "فارسی"
+  },
+  "Nav": {
+    "dashboard": "داشبورد",
+    "dashboardDesc": "حساب و ریسک",
+    "journal": "ژورنال",
+    "journalDesc": "معاملات بسته‌شده",
+    "backtest": "بک‌تست",
+    "backtestDesc": "آزمایش استراتژی",
+    "settings": "تنظیمات",
+    "settingsDesc": "اتصال"
+  },
+  "Dashboard": {
+    "metaTitle": "داشبورد",
+    "metaDescription": "خلاصه حساب متاتریدر، بالانس، موجودی، پوزیشن‌های باز و عملکرد.",
+    "eyebrow": "نمای کلی",
+    "title": "داشبورد",
+    "description": "وضعیت زنده متاتریدر، ریسک باز و عملکرد معاملات بسته‌شده؛ همه در یک نگاه.",
+    "accountPulse": "وضعیت حساب",
+    "accountPulseHint": "بالانس، موجودی و ریسک باز",
+    "performance": "عملکرد",
+    "performanceHint": "بر پایه {count} معامله بسته‌شده",
+    "recentTrades": "آخرین معاملات",
+    "recentTradesHint": "آخرین معاملات بسته‌شده از تاریخچه متاتریدر",
+    "shownOf": "{shown} از {total}",
+    "noClosedYet": "هنوز معامله بسته‌شده‌ای ندارید",
+    "noClosedHint": "برای پر شدن این بخش، حساب MT4 را همگام کنید.",
+    "apiUnreachable": "اتصال به API برقرار نشد",
+    "apiUnreachableHint": "بک‌اند Flask را روی پورت ۵۰۰۱ اجرا کنید و صفحه را دوباره بارگذاری کنید.",
+    "inspect": "بررسی MT4",
+    "sync": "همگام‌سازی حساب",
+    "savedToast": "در ژورنال ذخیره شد",
+    "savedToastDesc": "{inserted} جدید · {updated} به‌روز · {total} مجموع",
+    "syncFailed": "همگام‌سازی انجام نشد",
+    "metrics": {
+      "balance": "بالانس",
+      "balanceHint": "موجودی تسویه‌شده حساب",
+      "equity": "موجودی",
+      "equityHint": "بالانس به‌علاوه سود و زیان شناور",
+      "floating": "سود و زیان شناور",
+      "floatingHint": "پوزیشن باز · مارجین استفاده‌شده: {margin}",
+      "drawdown": "افت سرمایه",
+      "drawdownHint": "بیشینه {amount} · باز {current}",
+      "winRate": "نرخ برد",
+      "winRateHint": "{wins} برد · {losses} باخت",
+      "netProfit": "سود خالص",
+      "netProfitHint": "جمع سود و زیان معاملات بسته‌شده",
+      "profitFactor": "ضریب سود",
+      "profitFactorHint": "امید ریاضی: {value}",
+      "avgWinLoss": "میانگین برد / باخت",
+      "avgWinLossHint": "میانگین معاملات برنده در برابر بازنده"
+    },
+    "account": {
+      "eyebrow": "حساب معاملاتی",
+      "fallbackName": "حساب {login}",
+      "live": "MT4 زنده",
+      "synced": "آخرین همگام‌سازی",
+      "login": "شماره حساب",
+      "currency": "ارز",
+      "leverage": "اهرم",
+      "lastUpdate": "آخرین به‌روزرسانی",
+      "floating": "سود و زیان شناور",
+      "emptyTitle": "حساب متاتریدر متصل نیست",
+      "emptyHint": "از دکمه‌های بالا همگام‌سازی کنید تا بالانس، موجودی و تاریخچه معاملات دریافت شود."
+    },
+    "positions": {
+      "title": "پوزیشن‌های باز",
+      "hint": "ریسک زنده بازار از متاتریدر",
+      "openCount": "{count} باز",
+      "flatTitle": "بدون پوزیشن باز",
+      "flatHint": "الان هیچ پوزیشن بازی روی این حساب ندارید.",
+      "timesUtc": "زمان‌ها بر اساس UTC",
+      "oldestOpen": " · قدیمی‌ترین پوزیشن باز: {time}"
+    },
+    "equityCurve": {
+      "title": "منحنی موجودی",
+      "hint": "سود و زیان تجمعی معاملات بسته‌شده در طول زمان",
+      "emptyTitle": "هنوز نموداری نیست",
+      "emptyHint": "با بسته شدن معاملات، مسیر موجودی اینجا رسم می‌شود."
+    },
+    "table": {
+      "ticket": "تیکت",
+      "symbol": "نماد",
+      "side": "سمت",
+      "volume": "حجم",
+      "duration": "مدت",
+      "closed": "بسته شدن",
+      "profit": "سود",
+      "open": "ورود",
+      "current": "فعلی",
+      "slTp": "حد ضرر / حد سود"
+    }
+  },
+  "Journal": {
+    "metaTitle": "ژورنال",
+    "metaDescription": "جدول معاملات بسته‌شده با جستجو، فیلتر و نمایش سود و زیان.",
+    "eyebrow": "دفتر معاملات",
+    "title": "ژورنال",
+    "description": "معاملات بسته‌شده حساب #{account} · {currency}",
+    "emptyDescription": "بعد از همگام‌سازی متاتریدر، معاملات بسته‌شده اینجا نشان داده می‌شوند.",
+    "emptyTitle": "ژورنال خالی است",
+    "emptyHint": "اول از داشبورد حساب MT4 را همگام کنید تا تیکت‌ها، نمادها و نتایج پر شوند.",
+    "closedTrades": "معاملات بسته‌شده",
+    "filtersTitle": "فیلترها",
+    "filtersHint": "میز کار را بر اساس سمت، بافت بازار یا نتیجه محدود کنید",
+    "filtersActive": "{count} فعال",
+    "clearFilters": "پاک کردن فیلترها",
+    "filteredCount": "{shown} از {total}",
+    "paginationSummary": "نمایش {from}–{to} از {total}",
+    "paginationPage": "صفحه {page} از {pages}",
+    "paginationPrev": "قبلی",
+    "paginationNext": "بعدی",
+    "paginationNav": "صفحه‌بندی ژورنال",
+    "paginationGoTo": "رفتن به صفحه {page}",
+    "filterLabels": {
+      "search": "جستجو"
+    },
+    "searchPlaceholder": "جستجوی تیکت، نماد یا یادداشت…",
+    "allSides": "همه سمت‌ها",
+    "allTimeframes": "همه تایم‌فریم‌ها",
+    "allSessions": "همه سشن‌ها",
+    "allTrends": "همه روندها",
+    "allCycles": "همه سایکل‌ها",
+    "allResults": "همه نتایج",
+    "resultFilter": "نتیجه",
+    "buy": "خرید",
+    "sell": "فروش",
+    "winners": "برنده‌ها",
+    "losers": "بازنده‌ها",
+    "breakEven": "سر‌به‌سر",
+    "noMatch": "هیچ معامله‌ای با فیلترهای فعلی پیدا نشد.",
+    "win": "برد",
+    "loss": "باخت",
+    "be": "سر‌به‌سر",
+    "addManualAction": "افزودن رکورد",
+    "addManualTitle": "افزودن رکورد ژورنال",
+    "addManualHint": "یک معامله را دستی با یادداشت، R/R، بافت بازار و اسکرین‌شات اختیاری ثبت کنید.",
+    "saveManual": "ذخیره رکورد",
+    "manualCreated": "رکورد ژورنال اضافه شد",
+    "manualCreateFailed": "افزودن رکورد ژورنال ممکن نشد",
+    "manualTicket": "دستی",
+    "emptyHintManual": "از داشبورد MT4 را همگام کنید، یا برای شروع یک رکورد دستی اضافه کنید.",
+    "editTrade": "ویرایش یادداشت ژورنال",
+    "enrichmentTitle": "یادداشت ژورنال",
+    "enrichmentHint": "برای تیکت #{ticket} · {symbol} یادداشت، R/R، بافت بازار و اسکرین‌شات اضافه کنید. فیلدهای MT4 تغییر نمی‌کنند.",
+    "enrichmentFooter": "هر زمان رکورد دستی اضافه کنید، یا با مداد معاملات همگام‌شده را غنی کنید. همگام‌سازی یادداشت‌ها را بازنویسی نمی‌کند.",
+    "enrichmentSaved": "یادداشت ژورنال ذخیره شد",
+    "enrichmentSaveFailed": "ذخیره یادداشت ژورنال ممکن نشد",
+    "saveEnrichment": "ذخیره یادداشت",
+    "saving": "در حال ذخیره…",
+    "cancel": "انصراف",
+    "unset": "تنظیم‌نشده",
+    "fields": {
+      "symbol": "نماد",
+      "side": "سمت",
+      "volume": "حجم",
+      "openPrice": "قیمت ورود",
+      "closePrice": "قیمت خروج",
+      "profit": "سود",
+      "openTime": "زمان ورود",
+      "closeTime": "زمان خروج",
+      "rMultiple": "R/R",
+      "timeframe": "تایم‌فریم",
+      "session": "سشن",
+      "trend": "روند",
+      "cycle": "سایکل",
+      "notes": "یادداشت",
+      "notesPlaceholder": "کیفیت ستاپ، اشتباهات، مشاهدات…",
+      "image": "تصویر معامله",
+      "uploadImage": "آپلود اسکرین‌شات",
+      "uploadImageHint": "اختیاری · JPG، PNG، WEBP",
+      "removeImage": "حذف تصویر",
+      "imagePreview": "پیش‌نمایش اسکرین‌شات معامله"
+    },
+    "table": {
+      "ticket": "تیکت",
+      "symbol": "نماد",
+      "side": "سمت",
+      "volume": "حجم",
+      "open": "ورود",
+      "close": "خروج",
+      "duration": "مدت",
+      "result": "نتیجه",
+      "comment": "توضیح",
+      "profit": "سود",
+      "image": "تصویر",
+      "timeframe": "تایم‌فریم",
+      "trend": "روند",
+      "cycle": "سایکل",
+      "r": "R/R"
+    }
+  },
+  "Backtest": {
+    "metaTitle": "بک‌تست",
+    "metaDescription": "ساخت استراتژی و ثبت دستی معاملات بک‌تست.",
+    "recordsMetaTitle": "بک‌تست استراتژی",
+    "recordsMetaDescription": "مشاهده و افزودن رکوردهای دستی بک‌تست برای یک استراتژی.",
+    "eyebrow": "آزمایش استراتژی",
+    "title": "بک‌تست",
+    "description": "اول نام استراتژی را وارد کنید، بعد همه معاملات بک‌تست را در دفتر همان استراتژی ثبت کنید.",
+    "createTitle": "استراتژی جدید",
+    "createHint": "نام استراتژی را وارد کنید تا دفتر بک‌تست آن باز شود.",
+    "createAction": "ساخت استراتژی",
+    "creating": "در حال ساخت…",
+    "strategiesTitle": "استراتژی‌های شما",
+    "strategiesHint": "یک استراتژی را باز کنید تا رکوردها را ببینید و اضافه کنید",
+    "emptyStrategiesTitle": "هنوز استراتژی‌ای ندارید",
+    "emptyStrategiesHint": "بالا اولین نام استراتژی را بسازید — مثلاً London Breakout یا Liquidity Sweep.",
+    "noDescription": "بدون توضیح",
+    "recordsCount": "{count} رکورد",
+    "openStrategy": "باز کردن رکوردها",
+    "strategyCreated": "استراتژی ساخته شد",
+    "strategyCreateFailed": "ساخت استراتژی ممکن نشد",
+    "strategyDeleted": "استراتژی حذف شد",
+    "strategyDeleteFailed": "حذف استراتژی ممکن نشد",
+    "deleteStrategy": "حذف استراتژی",
+    "deleteStrategyTitle": "استراتژی حذف شود؟",
+    "deleteStrategyHint": "«{name}» و {count} رکورد بک‌تست آن برای همیشه حذف می‌شوند.",
+    "deleteStrategyWarning": "این کار برگشت‌پذیر نیست. اسکرین‌شات‌های پیوست‌شده هم حذف می‌شوند.",
+    "confirmDeleteStrategy": "حذف استراتژی",
+    "deletingStrategy": "در حال حذف…",
+    "recordsEyebrow": "رکوردهای بک‌تست",
+    "recordsDescription": "{count} معامله ثبت‌شده در این استراتژی",
+    "backToStrategies": "همه استراتژی‌ها",
+    "strategyNotFound": "استراتژی پیدا نشد",
+    "addRecordTitle": "افزودن رکورد بک‌تست",
+    "addRecordHint": "یک معامله بک‌تست را ثبت کنید. در صورت نیاز اسکرین‌شات هم اضافه کنید — فقط مسیر فایل در SQLite ذخیره می‌شود.",
+    "addRecordAction": "افزودن رکورد",
+    "closeAddRecord": "بستن فرم افزودن",
+    "saveRecord": "ذخیره رکورد",
+    "savingRecord": "در حال ذخیره…",
+    "recordCreated": "رکورد بک‌تست ذخیره شد",
+    "recordCreateFailed": "ذخیره رکورد ممکن نشد",
+    "recordDeleted": "رکورد حذف شد",
+    "recordDeleteFailed": "حذف رکورد ممکن نشد",
+    "deleteRecord": "حذف رکورد",
+    "deleteRecordTitle": "رکورد حذف شود؟",
+    "deleteRecordHint": "معامله {side} {symbol} در {time} حذف شود.",
+    "deleteRecordWarning": "این کار برگشت‌پذیر نیست. اسکرین‌شات پیوست‌شده هم حذف می‌شود.",
+    "confirmDeleteRecord": "حذف رکورد",
+    "deletingRecord": "در حال حذف…",
+    "editRecord": "ویرایش رکورد",
+    "editRecordTitle": "ویرایش رکورد بک‌تست",
+    "editRecordHint": "فیلدهای معامله را به‌روز کنید. در صورت نیاز اسکرین‌شات را عوض یا حذف کنید.",
+    "saveChanges": "ذخیره تغییرات",
+    "cancelEdit": "انصراف",
+    "recordUpdated": "رکورد به‌روز شد",
+    "recordUpdateFailed": "به‌روزرسانی رکورد ممکن نشد",
+    "recordsTitle": "دفتر رکوردها",
+    "recordsHint": "همه معاملات دستی بک‌تست این استراتژی",
+    "filtersTitle": "فیلترها",
+    "filtersHint": "دفتر رکوردها را بر اساس نماد، سمت، سشن یا نتیجه محدود کنید",
+    "filtersActive": "{count} فعال",
+    "filterLabels": {
+      "search": "جستجو"
+    },
+    "searchPlaceholder": "جستجوی نماد یا یادداشت…",
+    "clearFilters": "پاک کردن فیلترها",
+    "filteredCount": "{shown} از {total}",
+    "noMatch": "هیچ رکوردی با این فیلترها مطابقت ندارد",
+    "allSides": "همه سمت‌ها",
+    "allTimeframes": "همه تایم‌فریم‌ها",
+    "allSessions": "همه سشن‌ها",
+    "allTrends": "همه روندها",
+    "allCycles": "همه سایکل‌ها",
+    "allResults": "همه نتایج",
+    "resultFilter": "نتیجه",
+    "winners": "بردها",
+    "losers": "باخت‌ها",
+    "breakEven": "سربه‌سر",
+    "emptyRecordsTitle": "هنوز رکوردی نیست",
+    "emptyRecordsHint": "با فرم بالا اولین معامله بک‌تست را اضافه کنید.",
+    "stats": {
+      "netProfit": "جمع R",
+      "winRate": "نرخ برد",
+      "records": "رکوردها",
+      "wl": "{wins} برد · {losses} باخت",
+      "wlShort": "برد / باخت",
+      "netR": "جمع R"
+    },
+    "fields": {
+      "strategyName": "نام استراتژی",
+      "strategyNamePlaceholder": "مثلاً London Breakout",
+      "description": "توضیح",
+      "descriptionPlaceholder": "یادداشت اختیاری درباره قوانین",
+      "symbol": "نماد",
+      "side": "سمت",
+      "volume": "حجم",
+      "timeframe": "تایم‌فریم",
+      "openPrice": "قیمت ورود",
+      "closePrice": "قیمت خروج",
+      "stopLoss": "حد ضرر",
+      "takeProfit": "حد سود",
+      "profit": "سود",
+      "rMultiple": "R/R",
+      "openTime": "زمان ورود",
+      "closeTime": "زمان خروج",
+      "notes": "یادداشت",
+      "notesPlaceholder": "کیفیت ستاپ، اشتباهات، مشاهدات…",
+      "rating": "امتیاز",
+      "session": "سشن",
+      "trend": "روند",
+      "image": "تصویر معامله",
+      "uploadImage": "آپلود اسکرین‌شات",
+      "uploadImageHint": "اختیاری · JPG، PNG، WEBP",
+      "removeImage": "حذف تصویر",
+      "imagePreview": "پیش‌نمایش اسکرین‌شات معامله",
+      "cycle": "سایکل"
+    },
+    "side": {
+      "buy": "خرید",
+      "sell": "فروش"
+    },
+    "table": {
+      "symbol": "نماد",
+      "side": "سمت",
+      "volume": "حجم",
+      "timeframe": "تایم‌فریم",
+      "open": "ورود",
+      "close": "خروج",
+      "duration": "مدت",
+      "r": "R/R",
+      "profit": "سود",
+      "session": "سشن",
+      "trend": "روند",
+      "image": "تصویر",
+      "openTime": "زمان ورود",
+      "cycle": "سایکل"
+    },
+    "validation": {
+      "required": "این فیلد الزامی است",
+      "tooLong": "مقدار خیلی بلند است",
+      "closeBeforeOpen": "زمان خروج باید بعد از زمان ورود باشد"
+    },
+    "session": {
+      "asian": "آسیا",
+      "london": "لندن",
+      "newyork": "نیویورک",
+      "london_ny": "لندن / نیویورک",
+      "other": "سایر"
+    },
+    "trend": {
+      "bullish": "صعودی",
+      "bearish": "نزولی",
+      "ranging": "رنج"
+    },
+    "timeframe": {
+      "1m": "1m",
+      "5m": "5m",
+      "15m": "15m",
+      "30m": "30m",
+      "1h": "1h"
+    },
+    "cycle": {
+      "spike": "اسپایک",
+      "channel": "چنل",
+      "trading_range": "تریدینگ رنج"
+    }
+  },
+  "Settings": {
+    "metaTitle": "تنظیمات",
+    "metaDescription": "راهنمای اجرا و تنظیمات اتصال ژورنال معاملاتی.",
+    "eyebrow": "فضای کاری",
+    "title": "تنظیمات",
+    "description": "چک‌لیست اجرای MT4 ویندوز، بک‌اند مک و فرانت‌اند؛ همراه با جزئیات اتصال API.",
+    "apiTitle": "اتصال API",
+    "apiHint": "فرانت‌اند برای بررسی و همگام‌سازی به این بک‌اند وصل می‌شود",
+    "configured": "پیکربندی شده",
+    "backendUrl": "آدرس بک‌اند",
+    "website": "وب‌سایت",
+    "apiFooter": "حالت زنده از <adapter></adapter> استفاده می‌کند و JSON را از <ea></ea> می‌خواند. معاملات همگام‌شده در SQLite مسیر <db></db> ذخیره می‌شوند.",
+    "languageTitle": "زبان",
+    "languageHint": "بین انگلیسی (چپ‌به‌راست) و فارسی (راست‌به‌چپ) جابه‌جا شوید",
+    "launch": {
+      "title": "راهنمای اجرا",
+      "intro": "هر بار که ژورنال را باز می‌کنید، این مراحل را به ترتیب انجام دهید و هر سه فرایند را تا پایان کار باز نگه دارید.",
+      "eachLaunch": "هر بار اجرا",
+      "orderMatters": "ترتیب مهم است:",
+      "orderCopy": "ویندوز MT4 و اسکریپت کپی → بک‌اند مک → فرانت‌اند مک → بررسی → همگام‌سازی.",
+      "command": "دستور",
+      "copy": "کپی",
+      "copied": "کپی شد",
+      "copySuccess": "دستور کپی شد",
+      "copyError": "کپی دستور انجام نشد",
+      "keepRunningTitle": "باز نگه دارید",
+      "keepRunningCopy": "اسکریپت PowerShell ویندوز، ترمینال Flask و ترمینال Next.js را هنگام کار نبندید. اگر داده‌ها کهنه به نظر می‌رسند، اول همین سه مورد را بررسی کنید.",
+      "stepLabel": "مرحله {order} · {machine}",
+      "sections": {
+        "windows": {
+          "machine": "ویندوز (Parallels)",
+          "title": "پل متاتریدر",
+          "summary": "اول MT4 را باز کنید تا فایل‌های JSON حساب به‌روز بمانند.",
+          "steps": {
+            "1": {
+              "title": "متاتریدر ۴ را باز کنید و وارد حساب شوید"
+            },
+            "2": {
+              "title": "مطمئن شوید EA مربوط به TradeJournalBridge روی چارت است",
+              "detail": "صورتک لبخند روی چارت باید دیده شود. ورودی‌ها: InpExportFolder = TradeJournal و InpHistoryDays = 0."
+            },
+            "3": {
+              "title": "اگر معاملات کم است، یک‌بار کل تاریخچه را بارگذاری کنید",
+              "detail": "تب Account History → راست‌کلیک → All History."
+            },
+            "4": {
+              "title": "اسکریپت کپی را اجرا کنید و باز بگذارید",
+              "detail": "این اسکریپت فایل‌های JSON را از ویندوز به پوشه پروژه مک کپی می‌کند."
+            },
+            "5": {
+              "title": "تأیید کنید پیام synced 4 file(s) چاپ می‌شود",
+              "detail": "heartbeat.json، account.json، positions.json، history.json"
+            }
+          }
+        },
+        "backend": {
+          "machine": "ترمینال مک ۱",
+          "title": "API بک‌اند",
+          "summary": "Flask فایل‌های پل را می‌خواند و معاملات را در SQLite ذخیره می‌کند.",
+          "steps": {
+            "1": {
+              "title": "API را اجرا کنید"
+            },
+            "2": {
+              "title": "از اجرای درست آن مطمئن شوید",
+              "detail": "API باید روی http://127.0.0.1:5001 در دسترس باشد"
+            },
+            "3": {
+              "title": "اختیاری: صحت‌سنجی ژورنال SQLite"
+            }
+          }
+        },
+        "frontend": {
+          "machine": "ترمینال مک ۲",
+          "title": "رابط کاربری",
+          "summary": "داشبورد و پنل‌های ژورنال با Next.js.",
+          "steps": {
+            "1": {
+              "title": "فرانت‌اند را اجرا کنید"
+            },
+            "2": {
+              "title": "وب‌سایت را باز کنید",
+              "detail": "http://localhost:3000/fa/dashboard"
+            }
+          }
+        },
+        "browser": {
+          "machine": "در مرورگر",
+          "title": "استفاده از میز کار",
+          "summary": "اول داده زنده را بگیرید، بعد آن را در پایگاه ژورنال ذخیره کنید.",
+          "steps": {
+            "1": {
+              "title": "روی «بررسی MT4» کلیک کنید",
+              "detail": "شماره حساب، بالانس و موجودی را چک کنید."
+            },
+            "2": {
+              "title": "روی «همگام‌سازی حساب» کلیک کنید",
+              "detail": "معاملات بسته‌شده را بدون تکرار در SQLite ذخیره می‌کند."
+            },
+            "3": {
+              "title": "ژورنال را باز کنید",
+              "detail": "همه معاملات ذخیره‌شده را مرور و ثبت کنید."
+            }
+          }
+        }
+      }
+    }
+  }
+}
